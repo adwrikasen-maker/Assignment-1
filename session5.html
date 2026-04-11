@@ -1,0 +1,185 @@
+<html>
+    <head>
+        <title>flexbox</title>
+
+    <style>
+    body, h1, h2, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+  }
+.maheLogo {
+    border-right-width: 1px;
+    border-right-style: solid;
+    border-right-color: black;
+    display: block;
+    width: 244px;
+    height: 60px;
+}
+.maheLogo img{
+    display: block;
+}
+.logoGroupWrapper {
+    margin-left: 20px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.maheLogoWrapper {
+    display: flex;
+    margin-left: 100px;
+
+}
+.hsbfLogoWrapper {
+    margin-right: 100px;
+}
+.banner {
+    background-image: url('./images/Banner.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 748px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.banner-content {
+    width: 627px;
+    padding-top: 40px;
+}
+.form-wrapper {
+    width: 371px;
+}
+.banner-content h1 {
+    font-size: 100px;
+    color: orange;
+    line-height: 150%;
+    font-weight: 900;
+}
+.banner-content .foundation-name {
+    font-size: 36px;
+    color: orange;
+    line-height: 150%;
+}
+.banner-content .scholarship-name {
+    font-size: 40px;
+    line-height: 150%;
+    color: balck;
+}
+.scholarship-description {
+    font-size: 18px;
+    margin-bottom: 30px;
+    margin-top: 37px;
+}
+.scholarship-description strong {
+    font-size: 30px;
+}
+.banner-content li {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+.banner-content a {
+    background-color: #ED4B00;
+    font-size: 24px;
+    border-radius: 31px;
+    color: white;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-decoration: none;
+}
+.banner-content ul {
+    margin-bottom: 80px;
+    margin-left: 30px;
+}
+.form-wrapper {
+    padding-top: 143px;
+}
+.form-wrapper h2 {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.form-wrapper form {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 30px 20px;
+}
+.form-wrapper input, .form-wrapper select, .form-wrapper button{
+    display: block;
+    width: 100%;
+    background-color: white;
+    padding: 13px 18px;
+    margin-bottom: 15px;
+}
+.form-wrapper button {
+    color: #ED4B00;
+    font-size: 24px;
+    border-radius: 32px;
+}
+</style>
+</head>
+<body>
+<header>
+<nav>
+    <div class="maheLogoWrapper">
+        <a href="/" class="maheLogo">
+            <img src="./mahelogo.png"alt="mahelogo">
+        </a>
+        <div class="logoGroupWrapper">
+            <img src="./images/logsGroup.png" alt="Logs Group">
+        </div>
+    </div>
+    <div class="hsbfLogoWrapper">
+        <img src="./images/hsbfLogo.png" alt="HSBF Logo">
+    </div>
+</nav>
+</header>   
+<div class="banner">
+<div class="banner-content">
+    <h1>HBSF–MAHE </h1>
+    <p class="foundation-name">Harish & Bina shah foundation</p>
+    <p class="scholarship-name">Eduempower scholarship</p>
+    <p class="scholarship-description">for <strong>B.Tech</strong> at <br/> Manipal Institute of Technology (MIT), Manipal</p>
+    <ul>
+        <li>100% Program Fee </li>
+        <li>Hostel Fee </li>
+        <li>Mess Charges Waived</li>
+    </ul>
+    <a href="">Apply Now</a>
+</div>
+<div class="form-wrapper">
+    <h2>Form</h2>
+    <form action="">
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Email">
+        <input type="text" placeholder="Phone">
+        <select>
+            <option>Select State</option>
+            <option>Maharashtra</option>
+            <option>Karnataka</option>
+            <option> Rajasthan</option>
+        </select>
+        <select>
+            <option>Select City</option>
+            <option>Mumbai</option>
+            <option> Pune </option>
+            <option> Bangalore </option>
+            <option> Jaipur </option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+</div>
+</body>
+</html>
+apps-fileview.texmex_20260311.11_p1
+index-flex

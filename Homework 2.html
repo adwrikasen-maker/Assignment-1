@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programs & Courses</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background: linear-gradient(to bottom, #f5f7fa, #dfe9f3);
+        text-align: center;
+        padding: 40px 20px;
+        color: #333;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .small-title {
+        font-size: 12px;
+        letter-spacing: 2px;
+        color: #888;
+        margin-bottom: 10px;
+    }
+
+    .main-title {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .highlight {
+        color: red;
+        font-style: italic;
+        margin-top: 5px;
+        font-size: 22px;
+    }
+
+    .description {
+        font-size: 13px;
+        color: #666;
+        margin: 15px auto 40px;
+        max-width: 600px;
+        line-height: 1.6;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 300px;
+        border-radius: 20px;
+        padding: 20px;
+        text-align: left;
+        background: white;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+    }
+
+    .card h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .card img {
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    /* Different card colors */
+    .card.blue {
+        background: linear-gradient(to bottom, #ffffff, #e6f4ff);
+    }
+
+    .card.pink {
+        background: linear-gradient(to bottom, #ffffff, #ffe6ef);
+    }
+
+    .card.green {
+        background: linear-gradient(to bottom, #ffffff, #e8f8f0);
+    }
+
+    .btn {
+        margin-top: 40px;
+        display: inline-block;
+        padding: 12px 25px;
+        border-radius: 25px;
+        background: red;
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: darkred;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="small-title">PROGRAMS & COURSES</div>
+
+    <div class="main-title">
+        370+ programs, 36+ disciplines.
+    </div>
+
+    <div class="highlight">One MAHE</div>
+
+    <div class="description">
+        MAHE Manipal is one of India's leading academic and research institutions.
+        It has been granted Institution of Eminence status by the Ministry of Education,
+        Government of India.
+    </div>
+
+    <div class="cards">
+
+        <!-- Card 1 -->
+        <div class="card blue">
+            <h3>Faculty of Health Sciences</h3>
+            <p>
+                The Faculty of Health Sciences offers globally recognized programs in
+                medicine, dentistry, nursing, pharmacy and allied health fields.
+            </p>
+            <img src="medical-student.png" alt="medical student">
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card pink">
+            <h3>Faculty of Technology & Science</h3>
+            <p>
+                The Faculty of Health Sciences offers globally recognized programs in
+                medicine, dentistry, nursing, pharmacy and allied health fields.
+            </p>
+            <img src="technical-student.png" alt="technical student">
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card green">
+            <h3>Faculty of Management, Law, Humanities & Social Sciences</h3>
+            <p>
+                The Faculty of Health Sciences offers globally recognized programs in
+                medicine, dentistry, nursing, pharmacy and allied health fields.
+            </p>
+            <img src="law-student.png" alt="law student">
+        </div>
+
+    </div>
+
+    <a href="#" class="btn">VIEW ALL PROGRAMS →</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programs & Courses</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background: linear-gradient(to bottom, #f5f7fa, #dfe9f3);
+        text-align: center;
+        padding: 40px 20px;
+        color: #333;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .small-title {
+        font-size: 12px;
+        letter-spacing: 2px;
+        color: #888;
+        margin-bottom: 10px;
+    }
+
+    .main-title {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .highlight {
+        color: red;
+        font-style: italic;
+        margin-top: 5px;
+        font-size: 22px;
+    }
+
+    .description {
+        font-size: 13px;
+        color: #666;
+        margin: 15px auto 40px;
+        max-width: 600px;
+        line-height: 1.6;
+    }
+
+    .cards {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    /* CARD */
+    .card {
+        width: 300px;
+        border-radius: 20px;
+        padding: 20px;
+        text-align: left;
+        background: white;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        transition: 0.3s;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+    }
+
+    .card h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 15px;
+    }
+
+    .card img {
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    /* CARD COLORS */
+    .card.blue {
+        background: linear-gradient(to bottom, #ffffff, #e6f4ff);
+    }
+
+    .card.pink {
+        background: linear-gradient(to bottom, #ffffff, #ffe6ef);
+    }
+
+    .card.green {
+        background: linear-gradient(to bottom, #ffffff, #e8f8f0);
+    }
+
+    /* ================= POPUP STYLE ================= */
+    .popup {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.75);
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+        transition: 0.4s ease;
+        border-radius: 20px;
+    }
+
+    .card:hover .popup {
+        bottom: 0;
+    }
+
+    /* BUTTON */
+    .btn {
+        margin-top: 40px;
+        display: inline-block;
+        padding: 12px 25px;
+        border-radius: 25px;
+        background: red;
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background: darkred;
+    }
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="small-title">PROGRAMS & COURSES</div>
+
+    <div class="main-title">370+ programs, 36+ disciplines.</div>
+
+    <div class="highlight">One MAHE</div>
+
+    <div class="description">
+        MAHE Manipal is one of India's leading academic and research institutions.
+        It has been granted Institution of Eminence status by the Ministry of Education,
+        Government of India.
+    </div>
+
+    <div class="cards">
+
+        <!-- CARD 1 -->
+        <div class="card blue">
+            <h3>Faculty of Health Sciences</h3>
+            <p>Medicine, dentistry, nursing, pharmacy and allied health fields.</p>
+
+            <img src="medical student.png" alt="medical student">
+
+            <div class="popup">
+                Explore Medicine, Nursing, Pharmacy & Health Programs
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="card pink">
+            <h3>Faculty of Technology & Science</h3>
+            <p>Engineering, science, technology and research programs.</p>
+
+            <img src="Technical student.png" alt="Technical student">
+
+            <div class="popup">
+                Discover Engineering, IT & Science Courses
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="card green">
+            <h3>Faculty of Management, Law & Humanities</h3>
+            <p>Business, law, humanities and social sciences programs.</p>
+
+            <img src="law student.png" alt="law student">
+
+            <div class="popup">
+                Learn Business, Law & Social Science Programs
+            </div>
+        </div>
+
+    </div>
+
+    <a href="#" class="btn">VIEW ALL PROGRAMS →</a>
+
+</div>
+
+</body>
+</html>

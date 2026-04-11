@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Learning Guide - Master All HTML Tags</title>
+    <meta name="description" content="A comprehensive HTML learning guide with examples of all major HTML tags">
+    <meta name="keywords" content="HTML, learning, tutorial, tags">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 16px;    
+            line-height: 20px;
+            color: red;
+            text-align: left;
+            font-style: italic;
+        }
+        h2 {
+            border-width: 4px;
+            border-style: solid;
+            border-color: black;
+            border-radius: 10px;
+
+        }
+        .button {
+            background-color: #E7590B;
+            color: #ffffff;
+            width: 225px;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            line-height: 150%;
+            font-weight: 500;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+        }
+    </style>
+    <!-- <style>
+        /* Styling to make the learning page visually appealing */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        
+        nav {
+            background-color: #555;
+            padding: 10px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        section {
+            background-color: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .tag-example {
+            background-color: #e8f4f8;
+            border-left: 4px solid #2196F3;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .code {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 10px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            border-radius: 3px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .highlight {
+            background-color: yellow;
+        }
+        
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 5px;
+        }
+    </style> -->
+</head>
+<body>
+    <!-- HEADER SECTION: Used to define the header of a page or section -->
+     
+   <form action="/submit" method="post">
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        
+                        <label for="name">Name:</label><br>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+                        
+                        <label for="email">Email:</label><br>
+                        <input type="email" id="email" name="email" placeholder="your@email.com" required><br><br>
+                        
+                        <label for="password">Password:</label><br>
+                        <input type="password" id="password" name="password"><br><br>
+                        
+                        <label for="age">Age:</label><br>
+                        <input type="number" id="age" name="age" min="0" max="120"><br><br>
+                        
+                        <label for="birthday">Birthday:</label><br>
+                        <input type="date" id="birthday" name="birthday"><br><br>
+                        
+                        <label for="country">Country:</label><br>
+                        <select id="country" name="country">
+                            <option value="">Select a country</option>
+                            <option value="usa">United States</option>
+                            <option value="uk">United Kingdom</option>
+                            <option value="canada">Canada</option>
+                            <option value="other">Other</option>
+                        </select><br><br>
+                        
+                        <label>Gender:</label><br>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label><br>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label><br>
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label><br><br>
+                        
+                        <label>Interests:</label><br>
+                        <input type="checkbox" id="coding" name="interest" value="coding">
+                        <label for="coding">Coding</label><br>
+                        <input type="checkbox" id="reading" name="interest" value="reading">
+                        <label for="reading">Reading</label><br>
+                        <input type="checkbox" id="sports" name="interest" value="sports">
+                        <label for="sports">Sports</label><br><br>
+                        
+                        <label for="bio">Bio:</label><br>
+                        <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Tell us about yourself"></textarea><br><br>
+                        
+                        <label for="file">Upload File:</label><br>
+                        <input type="file" id="file" name="file"><br><br>
+                        
+                        <button type="submit">Submit Form</button>
+                        <button type="reset">Reset Form</button>
+                    </fieldset>
+                </form>
+                <button class="button">Explore All <br/> Programs</button>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Tag</th>
+                    <th>Purpose</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&lt;table&gt;</td>
+                    <td>Defines a table</td>
+                    <td>Wraps all table content</td>
+                </tr>
+                <tr>
+                    <td>&lt;thead&gt;</td>
+                    <td>Table header section</td>
+                    <td>Contains header rows</td>
+                </tr>
+                <tr>
+                    <td>&lt;tbody&gt;</td>
+                    <td>Table body section</td>
+                    <td>Contains data rows</td>
+                </tr>
+                <tr>
+                    <td>&lt;tr&gt;</td>
+                    <td>Table row</td>
+                    <td>Each row of the table</td>
+                </tr>
+                <tr>
+                    <td>&lt;th&gt;</td>
+                    <td>Table header cell</td>
+                    <td>Column headers</td>
+                </tr>
+                <tr>
+                    <td>&lt;td&gt;</td>
+                    <td>Table data cell</td>
+                    <td>Data in each cell</td>
+                </tr>
+            </tbody>
+        </table>
+    <!-- MAIN CONTENT AREA -->
+    <main>
+        <!-- SECTION 1: DOCUMENT STRUCTURE TAGS -->
+        <section class="section-content" id="structure-tags">
+            <h2>1. Document Structure Tags</h2>
+            <p>These tags define the basic structure of an HTML document.</p>
+            
+            <div class="tag-example">
+                <h3>&lt;html&gt; - Root Element</h3>
+                <p><strong>Purpose:</strong> The root element that wraps all content on the page.</p>
+                <div class="code">&lt;html lang="en"&gt;...&lt;/html&gt;</div>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;head&gt; - Document Metadata</h3>
+                <p><strong>Purpose:</strong> Contains metadata, title, links to CSS, and scripts.</p>
+                <div class="code">&lt;head&gt;&lt;title&gt;Page Title&lt;/title&gt;&lt;/head&gt;</div>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;body&gt; - Document Body</h3>
+                <p><strong>Purpose:</strong> Contains all visible content on the page.</p>
+                <div class="code">&lt;body&gt;Your visible content here&lt;/body&gt;</div>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;meta&gt; - Metadata</h3>
+                <p><strong>Purpose:</strong> Defines metadata like character set, viewport, description.</p>
+                <div class="code">&lt;meta charset="UTF-8"&gt;<br>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: TEXT FORMATTING TAGS -->
+        <section id="text-tags">
+            <h2>2. Text Formatting Tags</h2>
+            <p>These tags are used to format and style text content.</p>
+            
+            <div class="tag-example">
+                <h3>Heading Tags: &lt;h1&gt; to &lt;h6&gt;</h3>
+                <p><strong>Purpose:</strong> Define headings, with h1 being the largest and h6 the smallest.</p>
+                <h1>This is H1 - Main Heading</h1>
+                <h2>This is H2 - Subheading</h2>
+                <h3>This is H3 - Smaller Subheading</h3>
+                <h4>This is H4</h4>
+                <h5>This is H5</h5>
+                <h6>This is H6 - Smallest Heading</h6>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;p&gt; - Paragraph</h3>
+                <p><strong>Purpose:</strong> Defines a paragraph of text.</p>
+                <p>This is a paragraph. It can contain multiple sentences and will automatically wrap to the next line when needed.</p>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;strong&gt; and &lt;b&gt; - Bold Text</h3>
+                <p><strong>Purpose:</strong> Make text bold. &lt;strong&gt; indicates importance, &lt;b&gt; is just styling.</p>
+                <p><strong>This text is strong (important)</strong> and <b>this is bold</b></p>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;em&gt; and &lt;i&gt; - Italic Text</h3>
+                <p><strong>Purpose:</strong> Make text italic. &lt;em&gt; indicates emphasis, &lt;i&gt; is just styling.</p>
+                <p><em>This text is emphasized</em> and <i>this is italic</i></p>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;mark&gt; - Highlighted Text</h3>
+                <p><strong>Purpose:</strong> Highlights text with a yellow background.</p>
+                <p>This is <mark>highlighted text</mark> for emphasis.</p>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;small&gt; - Smaller Text</h3>
+                <p><strong>Purpose:</strong> Displays smaller text.</p>
+                <p>Normal text and <small>smaller text</small></p>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;del&gt; and &lt;ins&gt; - Deleted and Inserted Text</h3>
+                <p><strong>Purpose:</strong> Show deleted (strikethrough) and inserted (underlined) text.</p>
+                <p><del>This text is deleted</del> and <ins>this text is inserted</ins></p>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;sub&gt; and &lt;sup&gt; - Subscript and Superscript</h3>
+                <p><strong>Purpose:</strong> Display subscript and superscript text.</p>
+                <p>H<sub>2</sub>O (water formula) and E=mc<sup>2</sup> (Einstein's equation)</p>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;br&gt; - Line Break</h3>
+                <p><strong>Purpose:</strong> Inserts a line break (self-closing tag).</p>
+                <p>First line<br>Second line after break</p>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;hr&gt; - Horizontal Rule</h3>
+                <p><strong>Purpose:</strong> Creates a horizontal line (self-closing tag).</p>
+                <hr>
+                <p>Content below the line</p>
+            </div>
+        </section>
+
+        <!-- SECTION 3: LISTS -->
+        <section>
+            <h2>3. List Tags</h2>
+            
+            <div class="tag-example">
+                <h3>&lt;ul&gt; - Unordered List (Bullets)</h3>
+                <p><strong>Purpose:</strong> Creates a bulleted list.</p>
+                <ul>
+                    <li>First item</li>
+                    <li>Second item</li>
+                    <li>Third item</li>
+                </ul>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;ol&gt; - Ordered List (Numbers)</h3>
+                <p><strong>Purpose:</strong> Creates a numbered list.</p>
+                <ol>
+                    <li>First step</li>
+                    <li>Second step</li>
+                    <li>Third step</li>
+                </ol>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;dl&gt; - Description List</h3>
+                <p><strong>Purpose:</strong> Creates a list of terms and descriptions.</p>
+                <dl>
+                    <dt>HTML</dt>
+                    <dd>HyperText Markup Language - the standard markup language for web pages</dd>
+                    <dt>CSS</dt>
+                    <dd>Cascading Style Sheets - used for styling HTML elements</dd>
+                </dl>
+            </div>
+        </section>
+
+        <!-- SECTION 4: LINKS AND MEDIA -->
+        <section id="media-tags">
+            <h2>4. Links and Media Tags</h2>
+            
+            <div class="tag-example">
+                <h3>&lt;a&gt; - Anchor (Link)</h3>
+                <p><strong>Purpose:</strong> Creates hyperlinks to other pages or sections.</p>
+                <p><a href="https://www.example.com">Visit Example.com</a></p>
+                <p><a href="#text-tags">Jump to Text Tags section</a></p>
+                <p><a href="mailto:email@example.com">Send an email</a></p>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;img&gt; - Image</h3>
+                <p><strong>Purpose:</strong> Embeds an image (self-closing tag).</p>
+                <div class="code">&lt;img src="image.jpg" alt="Description of image" width="300" height="200"&gt;</div>
+                <p><strong>Note:</strong> Always include 'alt' attribute for accessibility!</p>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;video&gt; - Video</h3>
+                <p><strong>Purpose:</strong> Embeds video content.</p>
+                <div class="code">&lt;video width="320" height="240" controls&gt;<br>&nbsp;&nbsp;&lt;source src="movie.mp4" type="video/mp4"&gt;<br>&nbsp;&nbsp;Your browser does not support the video tag.<br>&lt;/video&gt;</div>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;audio&gt; - Audio</h3>
+                <p><strong>Purpose:</strong> Embeds audio content.</p>
+                <div class="code">&lt;audio controls&gt;<br>&nbsp;&nbsp;&lt;source src="audio.mp3" type="audio/mpeg"&gt;<br>&nbsp;&nbsp;Your browser does not support the audio tag.<br>&lt;/audio&gt;</div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: TABLE TAGS -->
+        <section id="table-tags">
+            <h2>5. Table Tags</h2>
+            <p>These tags are used to create tables for displaying data.</p>
+            
+            <div class="tag-example">
+                <h3>Complete Table Example</h3>
+                <p><strong>Tags used:</strong> &lt;table&gt;, &lt;thead&gt;, &lt;tbody&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;</p>
+                
+                
+            </div>
+        </section>
+
+        <!-- SECTION 6: FORM TAGS -->
+        <section id="form-tags">
+            <h2>6. Form Tags</h2>
+            <p>These tags create interactive forms for user input.</p>
+            
+            <div class="tag-example">
+                <h3>Complete Form Example</h3>
+                <p><strong>Purpose:</strong> Collect user input and submit data.</p>
+                
+                
+                
+                <div class="code" style="margin-top: 15px;">
+                    <strong>Form Tags Explained:</strong><br>
+                    &lt;form&gt; - Container for form elements<br>
+                    &lt;fieldset&gt; - Groups related form elements<br>
+                    &lt;legend&gt; - Caption for fieldset<br>
+                    &lt;label&gt; - Label for input elements<br>
+                    &lt;input&gt; - Input field (many types)<br>
+                    &lt;select&gt; - Dropdown menu<br>
+                    &lt;option&gt; - Option in dropdown<br>
+                    &lt;textarea&gt; - Multi-line text input<br>
+                    &lt;button&gt; - Clickable button
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: SEMANTIC TAGS -->
+        <section>
+            <h2>7. Semantic HTML5 Tags</h2>
+            <p>These tags provide meaning to the structure of your content.</p>
+            
+            <div class="tag-example">
+                <h3>&lt;header&gt;</h3>
+                <p><strong>Purpose:</strong> Represents introductory content or navigation.</p>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;nav&gt;</h3>
+                <p><strong>Purpose:</strong> Defines navigation links.</p>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;main&gt;</h3>
+                <p><strong>Purpose:</strong> Specifies the main content of the document.</p>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;section&gt;</h3>
+                <p><strong>Purpose:</strong> Defines a section of content with a theme.</p>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;article&gt;</h3>
+                <p><strong>Purpose:</strong> Represents independent, self-contained content.</p>
+                <article>
+                    <h4>Example Article</h4>
+                    <p>This is an article that could stand alone, like a blog post or news story.</p>
+                </article>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;aside&gt;</h3>
+                <p><strong>Purpose:</strong> Content tangentially related to main content (sidebar).</p>
+                <aside>
+                    <p><strong>Did you know?</strong> HTML was created by Tim Berners-Lee in 1991.</p>
+                </aside>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;footer&gt;</h3>
+                <p><strong>Purpose:</strong> Represents footer content (copyright, contact info, etc.).</p>
+            </div>
+        </section>
+
+        <!-- SECTION 8: CONTAINER TAGS -->
+        <section>
+            <h2>8. Generic Container Tags</h2>
+            
+            <div class="tag-example">
+                <h3>&lt;div&gt; - Division (Block-level)</h3>
+                <p><strong>Purpose:</strong> Generic container for block-level content. Takes full width.</p>
+                <div style="background-color: #e0e0e0; padding: 10px; margin: 10px 0;">
+                    This is a div. It takes the full width available.
+                </div>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;span&gt; - Span (Inline)</h3>
+                <p><strong>Purpose:</strong> Generic container for inline content. Only takes needed space.</p>
+                <p>This is <span style="color: red; background-color: yellow;">a span element</span> inside a paragraph.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 9: SPECIAL TAGS -->
+        <section>
+            <h2>9. Special Purpose Tags</h2>
+            
+            <div class="tag-example">
+                <h3>&lt;code&gt; - Code</h3>
+                <p><strong>Purpose:</strong> Displays inline code.</p>
+                <p>Use <code>console.log()</code> to print to the console in JavaScript.</p>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;pre&gt; - Preformatted Text</h3>
+                <p><strong>Purpose:</strong> Preserves spaces and line breaks.</p>
+                <pre>
+function greet() {
+    console.log("Hello, World!");
+}
+                </pre>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;blockquote&gt; - Block Quote</h3>
+                <p><strong>Purpose:</strong> Represents a quoted section.</p>
+                <blockquote>
+                    "The best way to predict the future is to invent it." - Alan Kay
+                </blockquote>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;abbr&gt; - Abbreviation</h3>
+                <p><strong>Purpose:</strong> Defines an abbreviation or acronym.</p>
+                <p><abbr title="HyperText Markup Language">HTML</abbr> is the foundation of web pages.</p>
+            </div>
+            
+            <div class="tag-example">
+                <h3>&lt;iframe&gt; - Inline Frame</h3>
+                <p><strong>Purpose:</strong> Embeds another HTML page within current page.</p>
+                <div class="code">&lt;iframe src="https://www.example.com" width="600" height="400"&gt;&lt;/iframe&gt;</div>
+            </div>
+        </section>
+
+        <!-- SECTION 10: COMMENT -->
+        <section>
+            <h2>10. Comments</h2>
+            
+            <div class="tag-example">
+                <h3>&lt;!-- Comment --&gt;</h3>
+                <p><strong>Purpose:</strong> Add comments that won't be displayed on the page.</p>
+                <div class="code">&lt;!-- This is a comment. It won't appear on the page --&gt;</div>
+                <!-- This is an actual HTML comment -->
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer>
+        <p>&copy; 2026 HTML Learning Guide | Created for educational purposes</p>
+        <p>Contact: <a href="mailto:learn@html.com" style="color: #4CAF50;">learn@html.com</a></p>
+        <p><small>Last updated: February 2026</small></p>
+    </footer>
+    <iframe src="https://www.google.com" width="600" height="400"></iframe>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Interaction Playground</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        height: 200vh; /* makes scroll possible */
+        background: linear-gradient(to bottom, #eef2f3, #8e9eab);
+        transition: 0.4s;
+    }
+
+    /* HEADER */
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        background: white;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        font-weight: bold;
+        z-index: 1000;
+    }
+
+    /* SCROLL EFFECT */
+    body.scrolled {
+        background: linear-gradient(to bottom, #1c1c1c, #3a3a3a);
+        color: white;
+    }
+
+    /* PLAYGROUND AREA */
+    .playground {
+        margin-top: 80px;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        padding: 50px;
+        flex-wrap: wrap;
+    }
+
+    .box {
+        width: 200px;
+        height: 200px;
+        border-radius: 20px;
+        background: white;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        transition: 0.3s;
+        user-select: none;
+    }
+
+    .box.hovered {
+        transform: scale(1.1);
+        background: #ffeb3b;
+    }
+
+    .box.clicked {
+        background: #4caf50;
+        color: white;
+    }
+
+    /* CURSOR AREAS */
+    .cursor-area {
+        margin: 50px auto;
+        width: 80%;
+        padding: 40px;
+        text-align: center;
+        border: 2px dashed #333;
+        border-radius: 15px;
+        transition: 0.3s;
+    }
+
+    .cursor-area.hover {
+        background: rgba(0,0,0,0.1);
+    }
+
+    /* POPUP */
+    .popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        display: none;
+        text-align: center;
+        z-index: 2000;
+    }
+
+    .popup.show {
+        display: block;
+    }
+
+    button {
+        margin-top: 15px;
+        padding: 10px 20px;
+        border: none;
+        background: black;
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+</style>
+</head>
+
+<body>
+
+<header>🎮 JavaScript Interaction Playground</header>
+
+<!-- PLAYGROUND BOXES -->
+<div class="playground">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+</div>
+
+<!-- CURSOR AREA -->
+<div class="cursor-area" id="cursorArea">
+    Move your cursor here 👇 (Dynamic Cursor Zone)
+</div>
+
+<!-- POPUP -->
+<div class="popup" id="popup">
+    <h2 id="popupText"></h2>
+    <button onclick="closePopup()">Close</button>
+</div>
+
+<script>
+    const boxes = document.querySelectorAll('.box');
+    const cursorArea = document.getElementById('cursorArea');
+    const popup = document.getElementById('popup');
+    const popupText = document.getElementById('popupText');
+
+    /* =========================
+       MOUSE ENTER + LEAVE
+    ========================== */
+    boxes.forEach(box => {
+
+        box.addEventListener('mouseenter', () => {
+            box.classList.add('hovered');
+        });
+
+        box.addEventListener('mouseleave', () => {
+            box.classList.remove('hovered');
+        });
+
+        /* DOUBLE CLICK */
+        box.addEventListener('dblclick', () => {
+            box.classList.add('clicked');
+            showPopup("You double-clicked " + box.innerText);
+        });
+    });
+
+    /* =========================
+       CURSOR PLAYGROUND
+    ========================== */
+    cursorArea.addEventListener('mouseenter', () => {
+        cursorArea.classList.add('hover');
+        document.body.style.cursor = "crosshair";
+    });
+
+    cursorArea.addEventListener('mouseleave', () => {
+        cursorArea.classList.remove('hover');
+        document.body.style.cursor = "default";
+    });
+
+    /* =========================
+       SCROLL EVENT
+    ========================== */
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            document.body.classList.add('scrolled');
+        } else {
+            document.body.classList.remove('scrolled');
+        }
+    });
+
+    /* =========================
+       POPUP FUNCTIONS
+    ========================== */
+    function showPopup(message) {
+        popupText.innerText = message;
+        popup.classList.add('show');
+    }
+
+    function closePopup() {
+        popup.classList.remove('show');
+    }
+</script>
+
+</body>
+</html>

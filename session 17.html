@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programs & Courses</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+        background: linear-gradient(to bottom, #f5f7fa, #dfe9f3);
+        padding: 40px 20px;
+        color: #333;
+        transition: 0.3s;
+    }
+
+    /* APPLY BUTTON */
+    .apply-btn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: red;
+        color: white;
+        padding: 12px 28px;
+        border-radius: 50px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+        z-index: 1000;
+        transition: 0.3s ease;
+    }
+
+    .apply-btn.scrolled {
+        background: black;
+        transform: scale(1.1);
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: auto;
+        text-align: center;
+    }
+
+    .small-title {
+        font-size: 12px;
+        letter-spacing: 2px;
+        color: #888;
+        margin-bottom: 10px;
+    }
+
+    .main-title {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .highlight {
+        color: red;
+        font-style: italic;
+        margin-top: 5px;
+        font-size: 22px;
+    }
+
+    .description {
+        font-size: 13px;
+        color: #666;
+        margin: 15px auto 40px;
+        max-width: 600px;
+        line-height: 1.6;
+    }
+
+    /* CARDS */
+    .cards {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        width: 300px;
+        border-radius: 20px;
+        padding: 20px;
+        text-align: left;
+        background: white;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        transition: 0.3s;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card.active-hover {
+        transform: translateY(-10px) scale(1.03);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        cursor: zoom-in;
+    }
+
+    .card h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .card p {
+        font-size: 13px;
+        color: #666;
+        margin-bottom: 15px;
+    }
+
+    .img-box {
+        margin-top: auto;
+        cursor: pointer;
+    }
+
+    .img-box img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    .card.blue { background: linear-gradient(to bottom, #ffffff, #e6f4ff); }
+    .card.pink { background: linear-gradient(to bottom, #ffffff, #ffe6ef); }
+    .card.green { background: linear-gradient(to bottom, #ffffff, #e8f8f0); }
+
+    /* POPUP */
+    .popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+        z-index: 999;
+    }
+
+    .popup-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .popup-content {
+        background: white;
+        padding: 25px;
+        border-radius: 15px;
+        width: 340px;
+        text-align: center;
+        position: relative;
+        animation: popupAnim 0.3s ease;
+    }
+
+    @keyframes popupAnim {
+        from { transform: scale(0.8); opacity: 0; }
+        to { transform: scale(1); opacity: 1; }
+    }
+
+    .popup-content img {
+        width: 100%;
+        margin-top: 15px;
+        border-radius: 12px;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- APPLY BUTTON -->
+<button class="apply-btn" 
+onclick="openPopup('Apply Now','Start your application process today!','/mnt/data/image.png')">
+    APPLY NOW
+</button>
+
+<div class="container">
+
+    <div class="small-title">PROGRAMS & COURSES</div>
+    <div class="main-title">370+ programs, 36+ disciplines.</div>
+    <div class="highlight">One MAHE</div>
+
+    <div class="description">
+        MAHE Manipal is one of India's leading academic and research institutions.
+    </div>
+
+    <div class="cards">
+
+        <div class="card blue">
+            <h3>Faculty of Health Sciences</h3>
+            <p>Medicine, dentistry, nursing, pharmacy and allied health fields.</p>
+
+            <div class="img-box">
+                <img src="medical student.png">
+            </div>
+        </div>
+
+        <div class="card pink">
+            <h3>Faculty of Technology & Science</h3>
+            <p>Engineering, science, technology and research programs.</p>
+
+            <div class="img-box">
+                <img src="Technical student.png">
+            </div>
+        </div>
+
+        <div class="card green">
+            <h3>Faculty of Management, Law & Humanities</h3>
+            <p>Business, law, humanities and social sciences programs.</p>
+
+            <div class="img-box">
+                <img src="law student.png">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- POPUP -->
+<div id="popup" class="popup-overlay">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h2 id="popup-title"></h2>
+        <p id="popup-text"></p>
+        <img id="popup-img" style="display:none;">
+    </div>
+</div>
+
+<script>
+    function openPopup(title, text, imageSrc = "") {
+        document.getElementById('popup-title').innerText = title;
+        document.getElementById('popup-text').innerText = text;
+
+        const img = document.getElementById('popup-img');
+
+        if (imageSrc) {
+            img.src = imageSrc;
+            img.style.display = "block";
+        } else {
+            img.style.display = "none";
+        }
+
+        document.getElementById('popup').classList.add('active');
+    }
+
+    function closePopup() {
+        document.getElementById('popup').classList.remove('active');
+    }
+
+    document.getElementById('popup').addEventListener('click', function(e) {
+        if (e.target === this) closePopup();
+    });
+
+    /* MOUSE EVENTS */
+    const cards = document.querySelectorAll('.card');
+
+    cards.forEach(card => {
+
+        card.addEventListener('mouseenter', () => {
+            card.classList.add('active-hover');
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.classList.remove('active-hover');
+        });
+
+        card.addEventListener('dblclick', () => {
+            openPopup(
+                'Double Clicked!',
+                'You explored: ' + card.querySelector('h3').innerText
+            );
+        });
+    });
+
+    /* SCROLL EVENT */
+    window.addEventListener('scroll', () => {
+        const btn = document.querySelector('.apply-btn');
+
+        if (window.scrollY > 80) {
+            btn.classList.add('scrolled');
+        } else {
+            btn.classList.remove('scrolled');
+        }
+    });
+</script>
+
+</body>
+</html>
